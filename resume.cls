@@ -96,9 +96,13 @@
 % Defines the rSection environment for the large sections within the CV
 \newenvironment{rSection}[1]{ % 1 input argument - section name
   \sectionskip
-  \MakeUppercase{\bf #1} % Section title
+  \vspace{0.3em}
+%  {\bf #1} % Section title
+  {\sectionsize\bf #1} % Section title
+%  \MakeUppercase{\bf #1} % Section title
   \sectionlineskip
   \hrule % Horizontal line
+  \vspace{0.3em}
   \begin{list}{}{ % List for each individual item in the section
     \setlength{\leftmargin}{1.5em} % Margin within the section
   }
@@ -127,6 +131,7 @@
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
 \def\namesize{\Huge} % Size of the name at the top of the document
 %\def\namesize{\huge} % Size of the name at the top of the document
+\def\sectionsize{\Large} % Size of the name at the top of the document
 \def\addressskip{\smallskip} % The space between the two address (or phone/email) lines
 \def\sectionlineskip{\medskip} % The space above the horizontal line for each section 
 \def\nameskip{\bigskip} % The space after your name at the top
