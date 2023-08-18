@@ -27,15 +27,17 @@
 
 \documentclass{resume} % Use the custom resume.cls style
 
-\usepackage[left=0.40in,top=0.3in,right=0.75in,bottom=0.1in]{geometry} % Document margins
+\usepackage[left=0.40in,top=0.5in,right=0.75in,bottom=0.3in]{geometry} % Document margins
 \usepackage{fontawesome5}
 \usepackage[dvipsnames]{xcolor} % colors: https://en.wikibooks.org/wiki/LaTeX/Colors
 \usepackage{times}
+\usepackage{kotex}
 \usepackage[colorlinks = true,
 			linkcolor = blue,
 			urlcolor  = blue,
 			citecolor = blue,
 			anchorcolor = blue]{hyperref}
+%\usepackage{fancyhdr}
 
 % Ref: https://tex.stackexchange.com/questions/61015/how-to-use-different-colors-for-different-href-commands
 \newcommand{\MYhref}[3][black]{\href{#2}{\color{#1}{#3}}}%
@@ -45,124 +47,336 @@
 %	Here is \MYhref[brown]{http://www.google.com}{Google} and \MYhref[red]{http://www.yahoo.com}{Yahoo!}.
 %\end{document}
 
-
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-% \begin{center}
-% {\centerline {\em \textbf {Seeking for a fulltime internship from Sep 2019 - Apr 2010(8 months) } } }
-% \end{center}
-\name{Byungkook Oh} % Your name 
+
+\newcommand{\me}[1]{\underline{\textbf{#1}}}  % first author
+
+% 페이지 넘버링 시도중
+%\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{black} #1}}
+%\newcommand*{\makecvfooter}[3]{%
+%	\fancyfoot{}
+%	\fancyfoot[L]{\footerstyle{#1}}
+%	\fancyfoot[C]{\footerstyle{#2}}
+%	\fancyfoot[R]{\footerstyle{#3}}
+%}
+
+%----------------------------------------------------------------------------------------
+%	HEADER SECTION
+%----------------------------------------------------------------------------------------
+\name{~~~~Byungkook Oh} % Your name 
 
 %  $|$ \faGraduationCap{ B. Oh}
-\address{Samsung Research, 56, Seongchon-gil, Seocho-gu, Seoul, Republic of Korea}
-\address{\MYhref[Blue]{https://www.linkedin.com/in/byungkook-oh-1b0b981a3/}{\faLinkedin{ \underline{byungkook-oh-1b0b981a3}}} $|$ \MYhref[Blue]{https://bkoh509.github.io}{\faHome{ \underline{bkoh509.github.io}}} $|$ \faEnvelope{ bkoh509@gmail.com} $|$ \faPhone{ (+82)10-3742-3516}}
-\address{AI Research Scientist $\cdot$ Staff Engineer} 
-	
+\address{~~~~~~~~Samsung Research, 56, Seongchon-gil, Seocho-gu, Seoul, Republic of Korea}
+\address{~~~~~~~~\MYhref[Blue]{https://www.linkedin.com/in/byungkook-oh-1b0b981a3/}{\faLinkedin{ \underline{byungkook-oh-1b0b981a3}}} $|$ \MYhref[Blue]{https://bkoh509.github.io}{\faHome{ \underline{bkoh509.github.io}}} $|$ \faEnvelope{ bkoh509@gmail.com} $|$ \faPhone{ (+82)10-3742-3516}}
+\address{~~~~~~~~AI Research Scientist $\cdot$ Staff Engineer} 
+
 \begin{document}
-\vspace{1em}
-{\centerline {\em \textbf { “I pursue AI that thinks similar to humans based on \MYhref[Blue]{http://www.overleaf.com}{\underline{knowledge}}} } }
-{\centerline {\em \textbf { because it is vital to the future of AGI.” } } }
+% 페이지 넘버링 시도중
+%	\makecvfooter
+%	{\today}
+%	{\thepage}
+%	{}
+	
+	%----------------------------------------------------------------------------------------
+	%	Quote
+	%----------------------------------------------------------------------------------------
+	\vspace{1.5em}
+	{\centerline{\large\em{~~~~~~~~“I pursue AI that thinks similar to humans based on \MYhref[Blue]{http://www.overleaf.com}{\underline{knowledge}}} } }
+	{\centerline{\large\em{~~~~~~~~because it is vital to the future of AGI.”}}}
+	\vspace{0.5em}	
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION SECTION
-%----------------------------------------------------------------------------------------
+	%----------------------------------------------------------------------------------------
+	%	Research Interests
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Research Interests}
+		- Knowledge Representation\\
+		- Knowledge-enhanced NLP Applications\\
+		- Information Retrieval \& Recommendation
+	\end{rSection}
 
-\begin{rSection}{Education}
+	%----------------------------------------------------------------------------------------
+	%	Education & Experience
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Education \& Experience}
+		\textbf{Samsung Research}, Seoul, Republic of Korea \hfill {\small\em Jan. 2021 - Current} 
+		\\{ \textit {AI Research Scientist (Staff Engineer)}} 
+		
+		\textbf{Yonsei University}, Seoul, Republic of Korea \hfill {\small\em Oct. 2020 - Dec. 2020} 
+		\\{ \textit {Postdoctoral Researcher}} 
+		
+		\textbf{Yonsei University}, Seoul, Republic of Korea \hfill {\small\em Mar. 2015 - Aug. 2020} 
+		\\{ \textit {Ph.D. in Computer Science, GPA: 4.15/4.3}}\\
+		- Dissertation: Context-Aware Relational Learning for Knowledge Graph Completion\\
+		- Advisor: Prof. Kyong-Ho Lee
+		
+		\textbf{Yonsei University}, Seoul, Republic of Korea \hfill {\small\em Mar. 2011 - Feb. 2015} 
+		\\{ \textit {B.S. in Computer Science, Major GPA: 3.72/4.3}} 
+	\end{rSection}
 
-{\bf aaa'bbb University, Britain } \hfill {\em Jan 1998 - Feb 2002} 
-\\{ \textit {Master of  Magic \& Alchemy  }} 
+	%----------------------------------------------------------------------------------------
+	%	Publications
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Publications}
+		[23] Gayeon Park, Hyeongjun Yang, Kyuhwan Yeom, Myeongheon Jeon, Yunjeong Ko, \me{Byungkook Oh}, and
+		Kyong-Ho Lee, "\textbf{Knowledge-constrained Interest-aware Multi-Behavior Recommendation with Behavior Pattern Identification}." In AAAI 2024 \textit{(Under Review)}
+		
+		[22] Yerim Lee, Hyeongjun Yang, Gayeon Park, Taeyoung Kim, Kyong-Ho Lee, and \me{Byungkook Oh}, "\textbf{Granular Intents Learning via Mutual Information Maximization for Knowledge-aware Recommendation}." Information Sciences \textit{(IF: 8.1)} \textit{(Under Review)}
+		
+		[21] Xiongnan Jin, Zhilin Wang, Manni Duan, Yan Shao, Xingyun Hong, Yongheng Wang, Zemin Xu, Qinqin
+		Long, \me{Byungkook Oh}, and Kyong-Ho Lee, "\textbf{A Survey on Knowledge Graph Evolution: Proliferation, Embedding, and Versioning}." In ICTAI 2023 \textit{(Under Review)}
+		
+		[20] Heesoo Won, \me{Byungkook Oh}, Hyeongjun Yang, and Kyong-Ho Lee, "\textbf{Cross-modal contrastive learning for aspect-based recommendation}." Information Fusion, 99, 2023.11 \textit{(IF: 18.6)}
 
-{\bf bbb'ccc university, Britain} \hfill {\em July 1994 - June 2000} 
-\\ { \textit {Bachelor of Fantastic Beasts}} \hfill
-%Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
+		[19] \me{Byungkook Oh}, Yul Kim, and Bumki Min, "\textbf{Dual-Oriented Contrast for Recommendation with A Stop-Gradient Operation}." In CIKM 2023 \textit{(full)}
+		
+		[18] Seungmin Seo, \me{Byungkook Oh}, Jeongbeom Jeoung, Donghyun Kim, Kyong-Ho Lee, Dong-Hoon Shin, and
+		Yeonsoo Lee, "\textbf{Active learning for cross-sentence n-ary relation extraction}." Information Sciences, 645, 2023.10 \textit{(IF: 8.1)}
+		
+		\newpage
+		\vspace*{1em}
+		
+		[17] \me{Byungkook Oh}, Ilhyun Suh, Kihoon Cha, Junbeom Kim, Goeon Park, and Sihyun Jeong, "\textbf{Pre-training local and non-local geographical influences with contrastive learning}." Knowledge-Based Systems, 259, 2023.01 \textit{(IF: 8.8)}
+		
+		[16] Seungmin Seo, \me{Byungkook Oh}, Eunju Jo, Sanghak Lee; Dongho Lee; Kyong-Ho Lee; Donghoon Shin, and
+		Yeonsoo Lee, "\textbf{Active Learning for Knowledge Graph Schema Expansion}." IEEE Transactions on Knowledge and Data Engineering, 34(12), 2022.12 \textit{(IF: 8.9)}
+		
+		[15] Byungkook Oh, Seungmin Seo, Jimin Hwang, Dongho Lee, and Kyong-Ho Lee, "\textbf{Open-world knowledge graph completion for unseen entities and relations via attentive feature aggregation}." Information Sciences, 586, 2022.03 \textit{(IF: 8.1)}
 
+		[14] Junbeom Kim, Sihyun Jeong, Goeon Park, Kihoon Cha, Ilhyun Suh, and \me{Byungkook Oh}, "\textbf{DynaPosGNN: Dynamic-Positional GNN for Next POI Recommendation}." In ICDM Workshops 2021 \textit{(eight pages)}
 
-\end{rSection}
+		[13] Sungkwang Eom, \me{Byungkook Oh}, Sangjin Shin, and Kyong-Ho Lee, "\textbf{Multi-task learning for spatial events prediction from social data}." Information Sciences, 581, 2021.12 \textit{(IF: 8.1)}
 
-\begin{rSection}{Technical Skills}
+		[12] \me{Byungkook Oh}, Jimin Hwang, Seungmin Seo, Sejin Chun, and Kyong-Ho Lee, "\textbf{Inductive Gaussian representation of user-specific information for personalized stress-level prediction}." Expert Systems with Applications, 178, 2021.09 \textit{(IF: 8.5)}
+		
+		[11] Dongho Lee, \me{Byungkook Oh}, Seungmin Seo, and Kyong‑Ho Lee, "\textbf{News Recommendation with Topic‑Enriched Knowledge Graphs}." In CIKM 2020 \textit{(full)}
 
-\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
-Programming: \ & aaa,bbb,ccc,ddd,eee,fff,ggg,hhh \\
-Software \& Tools: & {\textbf{Backend: }}qqqq,wwww,eeee,rrrr,tttt,yyyy,uuuu,iiii\\
-& {\textbf{FrontEnd: }}aaaaa,bbbbb,eeee,cccc\\
-& {\textbf{Others: }}uuuu,uyyy,oooo,aaaa,vvv,eeee
-\end{tabular}
+		[10] Sanghak Lee, Seungmin Seo, \me{Byungkook Oh}, Kyong-Ho Lee, Donghoon Shin, and Yeonsoo Lee, "\textbf{Cross-sentence N-ary Relation Extraction using Entity Link and Discourse Relation}." In CIKM 2020 \textit{(full)}
 
-\end{rSection}
+		[9] Seungmin Seo, \me{Byungkook Oh}, and Kyong-Ho Lee, "\textbf{Reliable Knowledge Graph Path Representation Learning}." IEEE Access, 8, 2020.02 \textit{(IF: 3.9)}
 
-% \begin{rSection}{Carrier Objective}
-%  To work for an organization which provides me the opportunity to improve my skills and knowledge to grow along with the organization objective.
-% \end{rSection}
-%--------------------------------------------------------------------------------
-%    Projects And Seminars
-%-----------------------------------------------------------------------------------------------
-\begin{rSection}{Projects (All available in Github)}
+		[8] Xiongnan Jin, \me{Byungkook Oh}, Sanghak Lee, Dongho Lee, Kyong-Ho Lee, and Liang Chen, "\textbf{Learning Region Similarity over Spatial Knowledge Graphs with Hierarchical Types and Semantic Relations}." In CIKM 2019 \textit{(full)}
 
-{\bf Project1111111111111111111111111111111}
-\\- There were white out conditions in the town; subsequently, the roads were impassable.
-\\- Lets all be unique together until we realise we are all the same.
-\\- Should we start class now, or should we wait for everyone to get here?
+		[7] \me{Byungkook Oh}, Seungmin Seo, Cheolheon Shin, Eunju Jo, and Kyong-Ho Lee, "\textbf{Topic-Guided Coherence Modeling for Sentence Ordering by Preserving Global and Local Information}." In EMNLP 2019 \textit{(oral)}
+		
+		[6] \me{Byungkook Oh}, Sangjin Shin, Sungkwang Eom, Jooik Jung, Minjae Song, Seungmin Seo, and Kyong-Ho
+		Lee, "\textbf{Reliable TF-based recommender system for capturing complex correlations among contexts}." Journal of Intelligent Information Systems, 52(2), 2019.04 \textit{(IF: 3.4)}
+		
+		[5] \me{Byungkook Oh}, Seungmin Seo, and Kyong-Ho Lee, "\textbf{Knowledge Graph Completion by Context-Aware Convolutional Learning with Multi-Hop Neighborhoods}." In CIKM 2018 \textit{(full)}
 
-{\bf Project2222222222222222222222222222222222222}
-\\- The waves were crashing on the shore; it was a lovely sight.
-\\- The clock within this blog and the clock on my laptop are 1 hour different from each other.She only paints with bold colors; she does not like pastels.Wednesday is hump day, but has anyone asked the camel if he’s happy about it?
-\\- He turned in the research paper on Friday; otherwise, he would have not passed the class.
-\\- I am happy to take your donation; any amount will be greatly appreciated.
-\\- There was no ice cream in the freezer, nor did they have money to go to the store.
+		[4] Minjung Kim, \me{Byungkook Oh}, Jooik Jung, and Kyong-Ho Lee, "\textbf{Outlier-robust web service selection based on a probabilistic QoS model}." International Journal of Web and Grid Services, 12(2), 2016.05 \textit{(IF: 1.0)}
+		
+		[3] Minjung Kim, Xiongnan Jin, Jooik Jung, \me{Byungkook Oh}, and Kyong-Ho Lee, "\textbf{Web Service Selection based on a Probabilistic QoS Model}." In KCC 2015 \textit{(domestic)}
 
-{\bf Project33333333333333333333333333333333333333}
-\\- I currently have 4 windows open up… and I don’t know why.Should we start class now, or should we wait for everyone to get here?
-- Someone I know recently combined Maple Syrup  buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
-\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
+		[2] Seungmin Seo, Sejin Chun, \me{Byungkook Oh}, and Kyong-Ho Lee "\textbf{SDPA: Sensor Data Processing Architecture for Modeling Semantic Data from Sensor Steams}." In IRI 2015
 
+		[1] Sejin Chun, Seungmin Seo, \me{Byungkook Oh}, and Kyong-Ho Lee, "\textbf{Semantic description, discovery and integration for the Internet of Things}." In ICSC 2015
+	\end{rSection}
 
+	\newpage
+	
+	%----------------------------------------------------------------------------------------
+	%	Patents
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Patents}
+		[7] \me{Byungkook Oh} and XXX, "\textbf{Electronic Device and Controlling Method of Electronic Device}." \textit{(Explainable User Intent Learning based on Multi-Level Concepts)}, KR Patent, filed October 28, 2022
+		
+		[6] XXX, XXX, XXX, \me{Byungkook Oh}, and XXX, ”\textbf{Server and Control Method Thereof}.” \textit{(Pre-training Multi-Modal Geolocation Influence with Contrastive Learning, Dynamic-Positional Graph Neural Network for Next PoI Prediction)} KR Patent, filed February 23, 2022
+		
+		[5] Kyung-Ho Lee, Sanghak Lee, Seungmin Seo, and \me{Byungkook Oh}, ”\textbf{Method and Apparatus for Relation Extraction between Entities}.” KR Patent No. 10-2382914, filed June 17, 2020. and issued March 31, 2022
+		
+		[4] \me{Byungkook Oh} and Kyong-Ho Lee, ”\textbf{Method and Apparatus for Completing Zero-Shot Knowledge Graph Using Multi-Hop Neighborhoods}.” KR Patent No. 10-2273136, filed October 17, 2019. and issued June 29, 2021
+		
+		[3] \me{Byungkook Oh} and Kyong-Ho Lee, ”\textbf{Method and Apparatus for Reconstructing Sentence Order through Topic-Guided Coherence Modeling}.” KR Patent No. 10-2329738, filed October 30, 2019. and issued November 17, 2021
+		
+		[2] \me{Byungkook Oh} and Kyong-Ho Lee, ”\textbf{Method and Apparatus for Completing Knowledge Graph Based on Convolutional Learning Using Multi-Hop Neighborhoods}.” KR Patent No. 10-2189811, filed April 5, 2019 and issued December 04, 2020
+		
+		[1] \me{Byungkook Oh} and Kyong-Ho Lee, ”\textbf{Recommender System and Method Considering Correlations among Contexts}.” KR Patent No. 10‑1997222, filed January 03, 2018. and issued July 01, 2019
+	\end{rSection}
 
-\end{rSection}
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-%----------------------------------------------------------------------------------------
+	%----------------------------------------------------------------------------------------
+	%	Research Projects
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Research Projects}
+		% Project Manager: 연구개발관리 (기획, 조언, 검증 등)
+		%     R\&D Supervision (planning, advice, verification, etc.)
+		% Project Leader: 연구개발실무총괄 (기획, 제안, 개발, 검증 등)
+		%     General R\&D operation (planning, proposal, development, verification, etc.)
+		
+		\textbf{온톨로지 기반 멀티타입 상호작용 모델링 기술} \hfill {\small\em Yonsei University (Prof. Kyong-Ho Lee)}\\
+		{\small Ontology-based Multi-type Interaction Modeling} \hfill {\small\em Dec. 2022 - Dec. 2023}
+		\vspace{0.1em}\\
+		- \me{Project Manager}: R\&D Supervision (planning, advice, verification, etc.)\\
+		- 
+		\vspace{0.2em}
+		
+		\textbf{지식그래프 기반 사용자 의도 및 커뮤니티 탐색 기술} \hfill {\small\em Yonsei University (Prof. Kyong-Ho Lee)}\\
+		{\small Knowledge Graph based Intent-Community Detection} \hfill {\small\em Dec. 2021 - Dec. 2022}
+		\vspace{0.1em}\\
+		- \me{Project Manager}: R\&D Supervision (planning, advice, verification, etc.)\\
+		- 
+		\vspace{0.2em}
 
+		\textbf{동적으로 진화하는 지식그래프의 정보 품질 개선을 위한 심층 표현학습} \hfill {\small\em 한국연구재단}\\
+		{\small Deep Representation Learning for Improving the Information Quality of} \hfill {\small\em Jun. 2019 - Dec. 2020}
+		\vspace{-0.1em}\\
+		{\small Dynamically Evolving Knowledge Graphs}
+		\vspace{0.1em}\\
+		- \me{Project Leader}: General R\&D operation (planning, proposal, development, verification, etc.)\\
+		- Text-based zero/few-shot inference model development for KGC\\
+		- Learning sophisticated KG representations with neighborhood features aggregated by GCNs
+		\vspace{0.2em}
+		
+		\textbf{액티브 러닝을 활용한 다항 관계 지식 추출 및 구조화 기술 연구} \hfill {\small\em NC소프트 R\&D}\\
+		{\small Active Learning based N-ary Relation Extraction and Strucuralization} \hfill {\small\em May. 2019 - Dec. 2020}
+		\vspace{0.1em}\\
+		- Korean dataset construction\\
+		- Relation extraction model development based on Tree-LSTM and Transformer\\
+		- Active learning algorithm generate a new semantic type from the extracted relationships
+		\vspace{0.2em}
+		
+		\textbf{XAI (eXplainable AI) 기반 스마트 에너지 플랫폼 기술 개발} \hfill {\small\em 한전 전력연구원}\\
+		{\small Development of XAI-based Technology for Smart Energy Platform} \hfill {\small\em Mar. 2018 - Dec. 2020}
+		\vspace{0.1em}\\
+		- \me{Project Leader}: General R\&D operation (planning, proposal, development, verification, etc.)\\
+		- 가상 마이크로그리드 데이터셋 구축\\
+		- 에너지 지식 그래프 설계 및 지식 추론 연구\\
+		- 수요예측 딥러닝\&확률모형 융합 모델 개발
+		\vspace{0.2em}
+		
+		\textbf{사물인터넷을 위한 복합 이벤트 처리 기반 개인맞춤 상황인지형 추천 시스템} \hfill {\small\em 한국연구재단}\\
+		{\small A Personalized Context-aware Recommendation System} \hfill {\small\em Jun. 2016 - Jun. 2019}
+		\vspace{0.1em}\\
+		- \me{Project Leader}: General R\&D operation (planning, proposal, development, verification, etc.)\\
+		- 지식 추론 모델 개발 (CNN, TF, GCN 등 활용)\\
+		- 텐서 분해 기반 추천 시스템 개발
+		\vspace{0.2em}
+		
+		\textbf{사용자 중심 지식그래프 스키마 확장 기술} \hfill {\small\em NC소프트 R\&D}\\
+		{\small User-centeric Knowledge Graph Schema Expansion Technology} \hfill {\small\em Jun. 2018 - Feb. 2019}
+		\vspace{0.1em}\\
+		- 한국어 데이터셋 구축\\
+		- 관계 추출 모델 개발 (Transformer 등 활용)\\
+		- 액티브 러닝 알고리즘 개발
+		\vspace{0.2em}
+		
+		\textbf{통합 주소/식별체계에 기반한 IoT 서비스 플랫폼} \hfill {\small\em 미래창조과학부}\\
+		{\small Service Platform for Internet of Things} \hfill {\small\em Apr. 2013 - Apr. 2018}
+		\vspace{0.1em}\\
+		- 기계 학습 기반 스트림 데이터 처리\\
+		- 구조적 데이터 생성 모델 개발
+		\vspace{0.2em}
+		
+		\textbf{IoV 데이터 저장 및 분석을 위한 자동차 클라우드 서비스 플랫폼} \hfill {\small\em 미래창조과학부}\\
+		{\small Cloud-based Service Platform for IoV Data Storage and Analysis} \hfill {\small\em Jun. 2016 - Dec. 2016}
+		\vspace{0.1em}\\
+		- IoV 플랫폼 기술 검증\\
+		- 데이터셋 수집 및 구축
+		\vspace{0.2em}
+		
+		\textbf{사물 웹에서 빅 데이터의 시맨틱 매쉬업을 위한 클라우드 컴퓨팅 프레임워크} \hfill {\small\em 한국연구재단}\\
+		{\small A Cloud Computing Framework for Semantic Mashup of Big Data in the Web of Things} \hfill {\small\em Jun. 2013 - Jun. 2016}
+		\vspace{0.1em}\\
+		- 웹 기반 데이터 매쉬업 프레임워크 개발\\
+		- 데이터 매쉬업 시나리오에 기반한 실제 모형 개발
+		\vspace{0.2em}
+		
+		\textbf{제로에너지 커뮤니티에 적용한 가능한 시맨틱 서비스 및 기술 연구} \hfill {\small\em 한국전자통신연구원(ETRI)}\\
+		{\small Semantic Services and Technologies for Realizing Zero-Energy Community} \hfill {\small\em Aug. 2015 - Dec. 2015}
+		\vspace{0.1em}\\
+		- 프로슈머 기반 에너지 지식 그래프 설계
+		\vspace{0.2em}
+		
+		\textbf{개인지식그래프에 기반한 시맨틱 검색 및 추천} \hfill {\small\em LG전자}\\
+		{\small Semantic Search and Service Recommendation Based on Personal Knowledge Graph} \hfill {\small\em Mar. 2015 - Oct. 2015}
+		\vspace{0.1em}\\
+		- 지식그래프 탐색 알고리즘 개발\\
+		- 텐서 분해 기반의 개인맞춤 상황인지형 추천 시스템 개발
+	\end{rSection}
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE SECTION
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Work Experience}
+	%----------------------------------------------------------------------------------------
+	%	Honors & Awards
+	%----------------------------------------------------------------------------------------
+	\begin{rSection}{Honors \& Awards}
+		- BK21 PLUS Yonsei Scholarship in 2016-2, 2018-1, 2018-2, 2019-1, 2019-2, and 2020-1\\
+		- Yonsei University Research Scholarship in 2019-1 and 2020-1\\
+		- Undergraduate, Software Capstone Design (2014 fall semester), 1st prize\\
+		- Undergraduate, 2013 Spring semester GPA honors\\
+		- Undergraduate, National S\&T(Science \& Technology) Scholarship (Full Tuition for 2011)
+	\end{rSection}
 
-{\bf Work Station1,Strange Place } \hfill {\em May 2002 - June 2004} 
-{\textit{Backend Developer}}\\
-- Someone I know recently combined Maple Syrup  buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
-\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
-
-{\bf Work Station2,Strange Place2} \hfill {\em June 2005 - April 2008} 
-\\{\textit{Full-Stack Engineer}}
-\\- Someone I know recently combined Maple Syrup buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
-\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
-
-% \\- xx
-% \\- xx
-% there should be more lines
-
-%Minor in Linguistics \smallskip \\
-%Member of Eta Kappa Nu \\
-%Member of Upsilon Pi Epsilon \\
-
-
-\end{rSection}
-\begin{rSection}{Award}
-- First Prize\\
-- Second Prize\\
-- Third Prize\\
-\end{rSection}
-
-%	EXAMPLE SECTION
-%----------------------------------------------------------------------------------------
-
-% \begin{rSection}{Academic Achievements} 
-%  Runners up in B.G.Shirke Vidyarthi Competition for Innovative Project organized by Pune Construction Engineering Research Foundation in January 2018
-% \item Won First Prize in Model Making Competition Organized by Symbiosis Institute of Technology, Pune.
-% \end{rSection}
+%\begin{rSection}{Research Interests}
+%
+%{\bf aaa'bbb University, Britain } \hfill {\em Jan 1998 - Feb 2002} 
+%\\{ \textit {Master of  Magic \& Alchemy  }} 
+%
+%{\bf bbb'ccc university, Britain} \hfill {\em July 1994 - June 2000} 
+%\\ { \textit {Bachelor of Fantastic Beasts}} \hfill
+%%Minor in Linguistics \smallskip \\
+%%Member of Eta Kappa Nu \\
+%%Member of Upsilon Pi Epsilon \\
+%
+%
+%\end{rSection}
+%
+%\begin{rSection}{Technical Skills}
+%
+%\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+%Programming: \ & aaa,bbb,ccc,ddd,eee,fff,ggg,hhh \\
+%Software \& Tools: & {\textbf{Backend: }}qqqq,wwww,eeee,rrrr,tttt,yyyy,uuuu,iiii\\
+%& {\textbf{FrontEnd: }}aaaaa,bbbbb,eeee,cccc\\
+%& {\textbf{Others: }}uuuu,uyyy,oooo,aaaa,vvv,eeee
+%\end{tabular}
+%
+%\end{rSection}
+%
+%% \begin{rSection}{Carrier Objective}
+%%  To work for an organization which provides me the opportunity to improve my skills and knowledge to grow along with the organization objective.
+%% \end{rSection}
+%%--------------------------------------------------------------------------------
+%%    Projects And Seminars
+%%-----------------------------------------------------------------------------------------------
+%\begin{rSection}{Projects (All available in Github)}
+%
+%{\bf Project1111111111111111111111111111111}
+%\\- There were white out conditions in the town; subsequently, the roads were impassable.
+%\\- Lets all be unique together until we realise we are all the same.
+%\\- Should we start class now, or should we wait for everyone to get here?
+%
+%{\bf Project2222222222222222222222222222222222222}
+%\\- The waves were crashing on the shore; it was a lovely sight.
+%\\- The clock within this blog and the clock on my laptop are 1 hour different from each other.She only paints with bold colors; she does not like pastels.Wednesday is hump day, but has anyone asked the camel if he’s happy about it?
+%\\- He turned in the research paper on Friday; otherwise, he would have not passed the class.
+%\\- I am happy to take your donation; any amount will be greatly appreciated.
+%\\- There was no ice cream in the freezer, nor did they have money to go to the store.
+%
+%{\bf Project33333333333333333333333333333333333333}
+%\\- I currently have 4 windows open up… and I don’t know why.Should we start class now, or should we wait for everyone to get here?
+%- Someone I know recently combined Maple Syrup  buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
+%\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
+%
+%
+%
+%\end{rSection}
+%%----------------------------------------------------------------------------------------
+%%	TECHNICAL STRENGTHS SECTION
+%%----------------------------------------------------------------------------------------
+%
+%
+%%----------------------------------------------------------------------------------------
+%%	WORK EXPERIENCE SECTION
+%%----------------------------------------------------------------------------------------
+%\begin{rSection}{Work Experience}
+%{\bf Work Station1,Strange Place } \hfill {\em May 2002 - June 2004} 
+%{\textit{Backend Developer}}\\
+%- Someone I know recently combined Maple Syrup  buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
+%\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
+%
+%{\bf Work Station2,Strange Place2} \hfill {\em June 2005 - April 2008} 
+%\\{\textit{Full-Stack Engineer}}
+%\\- Someone I know recently combined Maple Syrup buttered Popcorn thinking it would taste like caramel popcorn. It didn’t and they don’t recommend anyone else do it either.
+%\\- Should we start class now, or should we wait for everyone to get here.Lets all be unique together until we realise we are all the same.
+%\end{rSection}
 
 % \newpage
 
