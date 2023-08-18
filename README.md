@@ -2,6 +2,8 @@
 
 ## Credit
 
+- Simple and Clear Your Username Resume: https://www.overleaf.com/latex/templates/simple-and-clear-your-username-resume/wksqncvzcbff
+
 ## History
 
 ### Do not Uppercase
