@@ -8,7 +8,7 @@
 
 We do not transform `\name` to uppercases and increase the font size (`\huge` to `\Huge`).
 
-```
+```latex
 % \printname is used to print the name as a page header
 \def \printname {
   \begingroup
